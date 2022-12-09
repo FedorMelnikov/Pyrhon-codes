@@ -1,0 +1,6 @@
+hero = "superman"
+word1 = hero[:5].upper()
+word2 = hero [5:].upper()
+word1 = ("^".join(word1))
+word2 = ("^".join(word2))
+print(f"{word1} {word2}")
