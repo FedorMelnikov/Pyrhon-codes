@@ -14,5 +14,5 @@ print(product_price_1 + product_price_2 + product_price_3)
 # (Hint: you may want to look up round() )
 total_price = (product_price_1 + product_price_2 + product_price_3)
 print(round(total_price))
-average_price = product_price_1 + product_price_2 + product_price_3 / 3
+average_price = (product_price_1 + product_price_2 + product_price_3) / 3
 print(f"The Total of {product_1}, {product_2}, {product_3} is {total_price} and the average price of the items is {average_price}.")
