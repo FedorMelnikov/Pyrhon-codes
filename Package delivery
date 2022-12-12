@@ -1,0 +1,47 @@
+# Ask the user to enter the price of the package they would like to purchase
+price_package = float(input("enter the price of the package "))
+#Ask the user to enter the total distance of the delivery in kms
+distance = float(input("enter the total distance of the delivery in kms. "))
+# Now add on the delivery costs to get the final cost of the product:
+
+
+air_delivery = 0.36
+freight_delivery = 0.25
+
+delivery_type = input("Choose delivery type (enter 'A' for air delivery or 'F' for freight delivery): ").upper()
+
+delivery_cost = 0
+if delivery_type == "A":
+    delivery_cost = air_delivery * distance
+else:
+    delivery_cost = freight_delivery * distance
+
+insurance_1 = 50
+insurance_2 = 25
+insurance_cost = 0
+insurance = input("enter the cost: A for R50.00 or F limited insurance R25.00: ").upper()
+if insurance == "A":
+    insurance_cost = insurance_1
+elif insurance == "B":
+    insurance_cost = insurance_2
+
+gift_1 = 15
+gift_2 = 0
+gift_cost = 0
+gift = input("enter the cost: A for Gift R15.00 or F for no gift R0.00 ").upper()
+if gift == "A":
+    gift_cost = gift_1
+elif gift == "F":
+    gift_cost = gift_2
+
+priority_1 = 100
+priority_2 = 20
+priority_cost = 0
+priority = input("Enter the cost: A for Priority R100.00 or F standard delivery R20.00 ")
+if priority == "A":
+    priority_cost = priority_1
+elif priority == "F":
+    priority_cost = priority_2
+
+total_cost = priority_cost + gift_cost + insurance_cost + price_package + delivery_cost
+print(f"Total cost for your package delivery = ${round(total_cost)}")
