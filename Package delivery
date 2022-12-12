@@ -1,6 +1,6 @@
 # Ask the user to enter the price of the package they would like to purchase
 price_package = float(input("enter the price of the package "))
-#Ask the user to enter the total distance of the delivery in kms
+# Ask the user to enter the total distance of the delivery in kms
 distance = float(input("enter the total distance of the delivery in kms. "))
 # Now add on the delivery costs to get the final cost of the product:
 
