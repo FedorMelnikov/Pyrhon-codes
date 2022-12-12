@@ -1,0 +1,24 @@
+# Determine if the user is a salesperson or a manager
+job = input("Enter A if you are salesperson or B if you are manager ").upper()
+
+salesperson_salary = 2000
+hourly_salary = 40
+gross_sales = 0
+hours_of_work = 0
+# Salespeople earn an 8% commission on their gross sales and a fixed salary of R2 000.00 per month. Managers earn an hourly rate of R40.00.
+
+# If the user is a salesperson, ask for their gross sales for the month.
+
+if job == "A":
+    gross_sales = int(input("Enter the number of your gross sales "))
+    salary_salesperson = salesperson_salary + (gross_sales / 100 * 8)
+    print(f"Your salary is {salary_salesperson}")
+
+elif job == "B":
+    hours_of_work = int(input("How many hours have you worked? "))
+    salary_manager = (hourly_salary * hours_of_work)
+    print(salary_manager)
+# if the user is a manager, ask for the number of hours worked for the month.
+
+else:
+    print("You have not entered neither A nor B")
