@@ -1,0 +1,27 @@
+# Ask the user to enter their weight in kg and their height in m
+weight_of_hippopotamus = int(input("Enter your weight in kg: "))
+height = float(input("Enter your height in m (for example 1.75): "))
+
+# BMI = (weight in kg) / ((height in m)*(height in m))
+height_2 = float(height ** height)
+
+bmi = round(float(weight_of_hippopotamus / height_2), 2)
+print(bmi)
+
+# If the user’s BMI is 30 or greater the user is obese
+if bmi >= 30:
+    print("You are fat")
+
+# If the user’s BMI is 25 or greater the user is overweight
+elif bmi >= 25:
+    print("You are a little fat")
+
+# If the user’s BMI is 18.5 or greater the user is normal
+elif bmi >= 18.5:
+    print("You are normal")
+# If the user’s BMI is less than 18.5 the user is underweight
+elif bmi < 18.5:
+    print("You are underweight")
+
+
+
