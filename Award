@@ -1,0 +1,16 @@
+# Your program should read in the times in minutes for all three events of a
+# triathlon, namely swimming, cycling, and running, and then calculate and
+# display the total time taken to complete the triathlon.
+time_swimming = int(input("Time of swimming in minutes "))
+time_cycling = int(input("Time of cycling in minutes "))
+time_running = int(input("Time of running in minutes "))
+time_triathlon = time_cycling + time_running + time_swimming
+if time_triathlon < 100:
+    print("You have gotten Provincial Colours")
+    # elif 100 <= time_triathlon < 105:
+elif time_triathlon >= 100 and time_triathlon < 105:
+    print("You have gotten Provincial Half Colours")
+elif time_triathlon >= 105 and time_triathlon < 110:
+    print("You have gotten Provincial Scroll")
+elif time_triathlon >= 110:
+    print("You have gotten no award")
