@@ -1,0 +1,35 @@
+import math
+
+calculation = input("""Choose either Investment or Bond from the menu below to proceed 
+\ninvestment - to calculate the amount of interest you will earn on your investment 
+\nbond - to calculate the amount you will have to pay on a home loan: """).upper()
+if calculation == "INVESTMENT":
+    # The amount of money that they are depositing
+    investment_money = int(input("Enter the amount of money that they are depositing: "))
+    # The interest rate (as a percentage).
+    investment_interest_rate = int(input("Enter the interest rate (as a percentage). Only the number of the interest rate should be entered: "))
+    # The number of years they plan on investing
+    investment_years = int(input("Enter the number of years you plan on investing: "))
+    # Then ask the user to input if they want “simple” or “compound” interest
+    investment_type_of_interest = input("Enter Simple or Compound for getting one of the types of the interest: ").upper()
+    interest = investment_type_of_interest
+    # output the appropriate amount that they will get back after the given period
+    if interest == "SIMPLE":
+        amount = int(investment_money * (1 + ((investment_interest_rate / 100) * investment_years)))
+        print(f"Your total amount will be {amount} $")
+    elif interest == "COMPOUND":
+        amount_compound = int(investment_money * math.pow((1 + investment_interest_rate / 100), investment_years))
+        print(f"Your total amount will be {amount_compound} $")
+    else:
+            print("You have entered something wrong")
+
+elif calculation == "BOND":
+    value = int(input("Enter the present value of the house "))
+    interest_rate = int(input("Enter the interest rate ")) / 100 * (1 / 12)
+    months = int(input("Enter the number of months you plan to take to repay the bond "))
+    loan_month = int((interest_rate * value) / (1 - (1 + interest_rate) ** (-months)))
+    # math.ceil((interest_rate * house_value) / (1 - (1 + interest_rate) ** (-months)))
+    print(f"You will have to be repaid on a home loan each month {loan_month} $")
+
+else:
+     print("You have entered something wrong")
