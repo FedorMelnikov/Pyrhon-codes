@@ -1,0 +1,29 @@
+shape = input("enter the shape of the building (square, rectangular or round). ")
+
+length = 0
+width = 0
+radius = 0
+area_square = 0
+area_rectangular = 0
+area_round = 0
+pi = 3.14
+
+# Area of square = length of the square to the power of two (length2).
+# Area of rectangle = length x width.
+# Area of circle = pi x radius squared (𝛱radius2)
+
+if shape == "square":
+    length = float(input("Enter the length "))
+    area_square = length ** 2
+    print(area_square)
+
+if shape == "rectengular":
+    length = float(input("Enter the length "))
+    width = float(input("Enter the width"))
+    area_rectangular = length * width
+    print(area_rectangular)
+    
+if shape == "round":
+    radius = float(input("Enter the radius "))
+    area_round = pi * radius ** 2
+    print(area_round)
