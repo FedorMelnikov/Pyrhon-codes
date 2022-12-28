@@ -1,0 +1,27 @@
+# Create a program called alternative.py that reads in a string and makes
+# each alternate character an uppercase character and each other alternate
+# character a lowercase character (e.g, the string “Hello World” would
+# become “HeLlO WoRlD”)
+sentence = input("Enter a sentence: ")
+sentence1 = ""
+for i in range (0, len(sentence)):
+    if i % 2 == 1:
+        sentence1 += sentence[i].lower()
+    else:
+        sentence1 += sentence[i].upper()
+print(sentence1)
+
+# Now, try starting with the same string but making each alternative word
+# lower and upper case (e.g. the string “I am learning to code” would
+# become “i AM learning TO code”). Using the split and join functions will
+# help you here.
+sentence = input("Enter a sentence: ")
+s_split = sentence.split()
+sentence1 = ""
+for i in range (0, len(s_split)):
+    if i % 2 == 0:
+        sentence1 += s_split[i].lower() + " "
+    else:
+        sentence1 += s_split[i].upper() + " "
+final_string = "".join(sentence1)
+print(final_string)
