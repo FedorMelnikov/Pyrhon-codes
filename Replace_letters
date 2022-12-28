@@ -1,0 +1,11 @@
+# Write a program called seperation.py that inputs a sentence and then
+# displays each word of the sentence on a separate line.
+# The quick brown fox jumps over the lazy dog.
+# After stripping a,e,i,o,u:
+# Th qck brwn fx jmps vr th lzy dg.
+sentence = input("Enter a sentence: ")
+disappear = ""
+while disappear != "stop":
+    disappear = input("Enter character you want to remove or 'stop' to end the program: ")
+    sentence = sentence.replace(disappear, "")
+print(sentence)
