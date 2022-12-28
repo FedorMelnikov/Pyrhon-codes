@@ -1,0 +1,12 @@
+# Write a program called seperation.py that inputs a sentence and then
+# displays each word of the sentence on a separate line.
+sentence = input("Enter a sentence: ")
+s_split = sentence.split()
+sentence1 = ""
+for i in range (0, len(s_split)):
+    if i % 2 == 0:
+        sentence1 += s_split[i] + "\n"
+    else:
+        sentence1 += s_split[i] + "\n"
+final_string = "".join(sentence1)
+print(final_string)
